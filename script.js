@@ -7,7 +7,7 @@
         off: 'unsubscribe'
     }, function( key, val ) {
         jQuery[val] = function() {
-            o[key].apply( o, arguments );
+            o[key].apply( o, arguments )
         };
     });
 })( jQuery );
@@ -18,12 +18,12 @@ class Rose{
     $.subscribe('fromBillyToRose', this.messReceived)
   }
   sendMessToBilly() {
-    console.log("Sending message to Billy")
+    console.log('Sending message to Billy')
     $.publish('fromRoseToBilly')
 
   }
   messReceived(){
-    console.log('Message from Billy received by Rose');
+    console.log('Message from Billy received by Rose')
   }
 
 }
@@ -38,7 +38,7 @@ class Billy{
 
     if(Math.floor(Math.random() * 2)==0)
 
-      console.log("run")
+      console.log('run')
     else
       $.publish('fromBillyToRose')
 
